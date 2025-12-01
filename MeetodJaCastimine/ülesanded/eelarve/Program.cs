@@ -25,43 +25,46 @@ namespace eelarve
                 kasutajanimi = Console.ReadLine();
             } while (kasutajanimi == "");
 
-            {
-                string kasutajasisestus = "";
-                while (kasutajasisestus != "rohkem pole")
-                {
-                    List<float> tulud = new List<float>();
-                    Console.WriteLine("Mis on teie sissetulekus? \n kui rohkem ei ole midagi lisada, siis kirjuta \"rohkem pole\"");
-                    kasutajasisestus = Console.ReadLine();
-                    if (kasutajasisestus != "rohkem pole")
-                    {
-                        tulud.Add(float.Parse(kasutajasisestus));
-                    }
 
-                   
-                    while (kasutajasisestus != "rohkem pole") ;
-                    {
-                        List<float> kulud = new List<float>();
-                        Console.WriteLine("Mis on teie väljaminekus? \n kui rohkem ei ole midagi lisada, siis kirjuta \"rohkem pole\"");
-                        if (kasutajasisestus != "rohkem pole") ;
-                        {
-                            kulud.Add(float.Parse(kasutajasisestus) );
-                        }
-                        public static float arvutus(List<float> kokkuarvutatavkollektsioon)
+            string kasutajasisestus = "";
+            List<float> kasutajatulud = new List<float> ();
+            List<float> kasutajakulud = new List<float>();
+
+            
+            while (kasutajasisestus != "rohkem pole")
+                Console.WriteLine($"Sinu kontojääk on: {Math.Round(kontojääk,2)}");
+            {
+                List<float> tulud = new List<float>();
+                Console.WriteLine("Mis on teie sissetulekus? \n kui rohkem ei ole midagi lisada, siis kirjuta \"rohkem pole\"");
+                kasutajasisestus = Console.ReadLine();
+                if (kasutajasisestus != "rohkem pole")
+                {
+                    tulud.Add(float.Parse(kasutajasisestus));
+                }
+            }
+
+            while (kasutajasisestus != "rohkem pole") ;
+            {
+                List<float> kulud = new List<float>();
+                Console.WriteLine("Mis on teie väljaminekus? \n kui rohkem ei ole midagi lisada, siis kirjuta \"rohkem pole\"");
+                if (kasutajasisestus != "rohkem pole") ;
+                {
+                    kulud.Add(float.Parse(kasutajasisestus));
+                }
+            }
+        }
+                    public static float arvutus(List<float> kokkuarvutatavkollektsioon)
         {
+            float tulemus = 0.00f;
             foreach (var arv in kokkuarvutatavkollektsioon)
             {
-                
+                tulemus = tulemus + arv;
             }
-            return null;
+            return tulemus;
         }
                     }
                 }
 
-            }
-        }
-    }
-}
-                    
                 
            
 
