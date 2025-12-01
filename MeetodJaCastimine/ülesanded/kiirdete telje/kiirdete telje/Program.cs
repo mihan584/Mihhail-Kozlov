@@ -25,12 +25,26 @@ namespace kiirdete_telje
             // FoodOrder() arvutab kokku kui palju ostukorv maksma läheb. iga asi on 1.5+ mingi random float. tsükkel käib niikaua kuni rohkem asju ei ole.
 
         }
- public static string UserLogin(string kasutajanimi, string parool)
+ public static string UserLogin(string kasutajanimi, string kasutajaparool)
 
         {
          while (kasutajanimi == "")
             {
-                Console.WriteLine("Mis on sinu")
+                Console.WriteLine("Mis on sinu kasutajanimi");
+                kasutajanimi = Console.ReadLine();
+                {
+                    while (kasutajaparool == "") ;
+                }
+                Console.WriteLine("Mis on sinu kasutajaparool");
+                kasutajaparool = Console.ReadLine();
+            }
+            if (kasutajanimi == "Mihhail") ;
+            {
+                Console.WriteLine("Kasutajanimi on vale");
+            }
+            if (kasutajaparool == "1234") ;
+            {
+                Console.WriteLine("Kasutajaparool on vale");
             }
         
 
