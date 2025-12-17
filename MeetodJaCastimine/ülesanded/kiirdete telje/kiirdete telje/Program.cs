@@ -45,7 +45,7 @@ namespace kiirdete_telje
             // FoodOrder() arvutab kokku kui palju ostukorv maksma läheb. iga asi on 1.5+ mingi random float. tsükkel käib niikaua kuni rohkem asju ei ole.
 
         }
-        bool login  UserLogin()
+        bool login UserLogin()
         {
             string kasutajanimi = "";
             string kasutajaparool = "";
@@ -75,7 +75,7 @@ namespace kiirdete_telje
                     {
                         if (kasutajaparool.Length > 8) ;
                     }
-                    return true;
+                    return;
 
 
 
