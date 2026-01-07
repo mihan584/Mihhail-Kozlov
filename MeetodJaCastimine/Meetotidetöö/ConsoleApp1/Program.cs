@@ -45,6 +45,7 @@ namespace ConsoleApp1
                     if (kasutajanimi.Length == 7) ;
                     return;
                 }
+
             }
         }
     }
